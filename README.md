@@ -1,4 +1,4 @@
-# 				**Pipeline**
+# **Pipeline**
 ## **abc project**
 
 **Environments:**
@@ -79,7 +79,7 @@ Playbooks are one of the core features of Ansible and tell Ansible what to execu
 
 **Note:3**
 
-> Each application contains playbook for deploying application called **Deployment.yml** 
+> Each application contains playbook for deploying application called `**Deployment.yml**` 
 
 Path to Ansible playbook:
 
@@ -104,22 +104,17 @@ Inventory file:  Ansible works against multiple systems in your infrastructure a
 
 - *Module:* A module that should be executed, and arguments that are required for the module you want to execute.
 
-**Modules used in Ansible playbook:**
+**Modules used in Ansible playbook:** **Deployment.yml**
 
-File: 
+File 
 
-Copy:
+Copy
 
-Shell:
+Shell
 
-Synchronize:
+Synchronize
 
-Template:
+Template
 
-Service:
-
-
-
-
-
+Service
 
