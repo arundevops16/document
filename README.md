@@ -9,6 +9,10 @@
    > Production
 
 **Applications:** {{ app_name }}
+   > admin-service
+
+   > comera_backend_api
+
 	> admin-service
 
 	> comera_backend_api
