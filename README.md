@@ -8,6 +8,20 @@
 
    > Production
 
+**Applications:** {{ app_name }}
+
+       > admin-service
+
+       > comera_backend_api
+
+       > contact_sync_service
+
+       > fcm
+
+       > mongooseim
+
+       > notifier_service
+
 **Note:1** 
 	
 - Currently this pipelines are created for staging environment
@@ -77,19 +91,19 @@ Inventory file:  Ansible works against multiple systems in your infrastructure a
 > path to inventory file /var/lib/jenkins/aaaaa/hosts
 
 
-Key terms used in Ansible playbook
+**Key terms used in Ansible playbook:**
 
-*hosts:* This tag specifies the lists of hosts or host group against which we want to run the task on defined hosts.
+- *hosts:* This tag specifies the lists of hosts or host group against which we want to run the task on defined hosts.
 
-*vars:* Vars tag let us to define the variables which can use in the playbook. 
+- *vars:* Vars tag let us to define the variables which can use in the playbook. 
 
-*tasks:*  Playbook contains a tasks are a list of actions one needs to perform. Each task internally links to a piece of code called a module.
+- *tasks:*  Playbook contains a tasks are a list of actions one needs to perform. Each task internally links to a piece of code called a module.
 
-*become:* Ansible allows you to ‘become’ another user, different from the user that logged into the machine (remote user). Set the value to ‘true’/’yes’ to activate privilege escalation.
+- *become:* Ansible allows you to ‘become’ another user, different from the user that logged into the machine (remote user). Set the value to ‘true’/’yes’ to activate privilege escalation.
 
-*Loops:* Often we want to do many things in one task, such as create a lot of users, install a lot of packages, or repeat a polling step until a certain result is reached.
+- *Loops:* Often we want to do many things in one task, such as create a lot of users, install a lot of packages, or repeat a polling step until a certain result is reached.
 
-*Module:* A module that should be executed, and arguments that are required for the module you want to execute.
+- *Module:* A module that should be executed, and arguments that are required for the module you want to execute.
 
 **Modules used in Ansible playbook:**
 
