@@ -2,8 +2,8 @@
 ## **Comera project**
 
 **Environments:**
-> Development
+   > Development
 
-> Staging
+   > Staging
 
-> Production
+   > Production
