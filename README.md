@@ -79,7 +79,7 @@ Playbooks are one of the core features of Ansible and tell Ansible what to execu
 
 **Note:3**
 
-> Each application contains playbook for deploying application called `**Deployment.yml**` 
+> Each application contains playbook for deploying application called **`Deployment.yml`** 
 
 Path to Ansible playbook:
 
