@@ -1,2 +1,7 @@
-# Pipelines
-## Jenkins
+# 				**Pipeline**
+## **Comera project**
+
+**Environments:**
+> Development
+> Staging
+> Production
