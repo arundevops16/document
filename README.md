@@ -9,21 +9,17 @@
    > Production
 
 **Applications:** {{ app_name }}
-   > admin-service
+   > adm-service
 
-   > comera_backend_api
+   > abc_backend_api
 
-   > admin-service
+   > con_syn_service
 
-   > comera_backend_api
+   > push
 
-   > contact_sync_service
+   > mim
 
-   > fcm
-
-   > mongooseim
-
-   > notifier_service
+   > not_service
 
 **Note:1** 
 	
