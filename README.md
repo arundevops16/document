@@ -37,17 +37,17 @@ Path to directory: */var/lib/jenkins/Abc_Staging_Pipelines_Playbooks*
 
 
 
-###Jenkinsfile: 
+### Jenkinsfile: 
 
-Jenkinsfile contains
+Jenkinsfile contains:-
 
-- def : Variables in Jenkinsfile can be define
+- _def_		: Variables in Jenkinsfile can be define with this tag
 
-- Label: On which node the job runs
+- _Label_	: On which node the job runs
 
-- Stages: Containing a sequence of one or more stage directives, the stages section is where the bulk of the "work" described by a Pipeline will be located.
+- _Stages_	: Containing a sequence of one or more stage directives, the stages section is where the bulk of the "work" described by a Pipeline will be located.
 
-- Post: Post section of a Pipeline is guaranteed to run at the end of a Pipeline’s execution, we can add some notification or other steps to perform finalization, notification, or other end-of-Pipeline tasks.
+- _Post_		: Post section of a Pipeline is guaranteed to run at the end of a Pipeline’s execution, we can add some notification or other steps to perform finalization, notification, or other end-of-Pipeline tasks.
 
 
 **Plugins used in Jenkins:**
@@ -58,42 +58,42 @@ Jenkinsfile contains
 
 - Ansible
 
-- 
 
+### Ansible playbooks:
 
-
-
-
-
-###Ansible playbooks:
-
-Playbooks are the files where Ansible code is written. Playbooks are written in YAML format. Playbooks are one of the core features of Ansible and tell Ansible what to execute. They are like a to-do list for Ansible that contains a list of tasks which user wants to execute on a particular machine.
+Playbooks are one of the core features of Ansible and tell Ansible what to execute and playbooks are written in YAML format. They are like a to-do list for Ansible that contains a list of tasks which user wants to execute on a particular machine.
 
 
 **Note:3**
 
 > Each application contains playbook for deploying application called **Deployment.yml** 
 
-*hosts:*
-This tag specifies the lists of hosts or host group against which we want to run the task. The hosts field/tag is mandatory. It tells Ansible on which hosts to run the listed tasks. The tasks can be run on the same machine or on a remote machine. One can run the tasks on multiple machines and hence hosts tag can have a group of hosts’ entry as well.
+Path to Ansible playbook:
 
-vars
-Vars tag lets you define the variables which you can use in your playbook. Usage is similar to variables in any programming language.
+> /var/lib/jenkins/aaaa/{{ app name }}/Deployment.yml
 
-tasks
-All playbooks should contain tasks or a list of tasks to be executed. Tasks are a list of actions one needs to perform. A tasks field contains the name of the task. This works as the help text for the user. It is not mandatory but proves useful in debugging the playbook. Each task internally links to a piece of code called a module. A module that should be executed, and arguments that are required for the module you want to execute.
+Inventory file:  Ansible works against multiple systems in your infrastructure at the same time. It does this by selecting portions of systems listed in Ansible’s inventory file.
 
-become:
-
-Loops: 
+> path to inventory file /var/lib/jenkins/aaaaa/hosts
 
 
-Host file or Invetory file:
+Key terms used in Ansible playbook
 
+*hosts:* This tag specifies the lists of hosts or host group against which we want to run the task on defined hosts.
 
-Modules used in Ansible playbook:
+*vars:* Vars tag let us to define the variables which can use in the playbook. 
 
-File:
+*tasks:*  Playbook contains a tasks are a list of actions one needs to perform. Each task internally links to a piece of code called a module.
+
+*become:* Ansible allows you to ‘become’ another user, different from the user that logged into the machine (remote user). Set the value to ‘true’/’yes’ to activate privilege escalation.
+
+*Loops:* Often we want to do many things in one task, such as create a lot of users, install a lot of packages, or repeat a polling step until a certain result is reached.
+
+*Module:* A module that should be executed, and arguments that are required for the module you want to execute.
+
+**Modules used in Ansible playbook:**
+
+File: 
 
 Copy:
 
@@ -104,16 +104,6 @@ Synchronize:
 Template:
 
 Service:
-
-
-
-
-
-
-
-
-
-
 
 
 
