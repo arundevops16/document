@@ -13,17 +13,17 @@
 
    > comera_backend_api
 
-	> admin-service
+   > admin-service
 
-	> comera_backend_api
-	
-	> contact_sync_service
+   > comera_backend_api
 
-	> fcm
+   > contact_sync_service
 
-	> mongooseim
+   > fcm
 
-	> notifier_service
+   > mongooseim
+
+   > notifier_service
 
 **Note:1** 
 	
