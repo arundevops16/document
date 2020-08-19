@@ -33,4 +33,4 @@ Pipelines are triggered from Jenkins console (staging - 0.0.0.0:9090)
 
 Path to directory: */var/lib/jenkins/Abc_Staging_Pipelines_Playbooks*
 
-
+![ansible scripts](https://github.com/arundevops16/document/blob/master/staging-dir-structure.png)
