@@ -31,7 +31,7 @@
 
 **Note:2**
 
-Abc\_Staging_Pipelines_Playbooks Folder contains ansible playbooks and jenkinsfile for
+- Abc\_Staging_Pipelines_Playbooks Folder contains ansible playbooks and jenkinsfile for
 abc staging Enviroment.
 
 
@@ -44,7 +44,9 @@ Pipelines are triggered from Jenkins console (staging - 0.0.0.0:9090)
 
 ***Directory structure***
 
-Path to directory: */var/lib/jenkins/Abc_Staging_Pipelines_Playbooks*
+Path to directory: 
+
+> ***/var/lib/jenkins/Abc_Staging_Pipelines_Playbooks***
 
 ![ansible scripts](https://github.com/arundevops16/document/blob/master/staging-dir-structure.png)
 
@@ -83,11 +85,13 @@ Playbooks are one of the core features of Ansible and tell Ansible what to execu
 
 Path to Ansible playbook:
 
-> /var/lib/jenkins/aaaa/{{ app name }}/Deployment.yml
+> ***/var/lib/jenkins/aaaa/{{ app name }}/Deployment.yml***
 
 Inventory file:  Ansible works against multiple systems in your infrastructure at the same time. It does this by selecting portions of systems listed in Ansible’s inventory file.
 
-> path to inventory file /var/lib/jenkins/aaaaa/hosts
+Path to inventory file:
+
+> ***/var/lib/jenkins/aaaaa/hosts***
 
 
 **Key terms used in Ansible playbook:**
