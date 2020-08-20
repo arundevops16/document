@@ -1,4 +1,4 @@
-# **Pipeline**
+# **PIPELINES**
 ## **abc project**
 
 **Environments:**
