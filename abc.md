@@ -2,6 +2,7 @@
 ## Description : The same company xyz has provided one of his developers an oracle based application which runs on a web logic server. Somehow the developer while trying to deploy the application is getting file related errors and he somehow concludes that there are way too many files open in the server via some editor or other commands like tails etc. So DevOps needs to identify the issue of too many open files and solve it.
 
 
+#
 ## **Findings:**
 
 The ulimit command allows you to control the user resource limits in the system such as process data size, process virtual memory, and process file size, number of process etc.
