@@ -37,20 +37,18 @@ weblogic java process create lot of socket connections, it might create the maxi
  
 To find max open file limit: 
 
-$ ulimit -n
+> **`$ ulimit -n`**
 
 ulimit further divided into soft limit and hard limit.
  
 Soft Limit :- 
 Soft limit means process will be allowed to go beyond this limit but it is warning that you are exceeding your resource consumption. And it will meet your hard limit soon.
- 
-$ ulimit -S -n
+> **`$ ulimit -S -n`** 
  
  
 HardLimit :- 
 Hard limit is a full stop for a process, Process will not be allowed to create more connection than this count. 
-
-$ ulimit -H -n.
+> **`$ ulimit -H -n`**
  
 
 Solution:
@@ -62,10 +60,10 @@ The maximum number of file descriptors is controlled two different ways:
 a) Per-User Limit:
 
 1. Explicitly set the number of file descriptors using the ulimit command
-$ ulimit -n <open count>
- 
-ex: $ ulimit -n 8096
- 
+$ **`ulimit -n <open count>`**
+
+ex:
+> **`$ ulimit -n 8096`** 
 Note:
 ulimit -n command show default soft limit , but when we set this using ulimit -n <open count> it set hard and soft. so if your hard limit is 8096 and you did ulimit -n 4096 , it will set your hard and soft limit to 4096 for that linux session.
 
@@ -86,8 +84,7 @@ b) System-Wide Limit
 Set this higher than user-limit set above /etc/sysctl.conf
 
 fs.file-max = 2097152
-
-$ sysctl -p
+> **`$ sysctl -p`**
 
 This will will increase “total” number of files that can remain open system-wide.
 
@@ -96,14 +93,11 @@ Verify New Limits
 cat /proc/sys/fs/file-max
 
 Hard Limit
-$ ulimit -Hn
-
+> **`$ ulimit -Hn`**
 Soft Limit
-$ ulimit -Sn
-
+> **`$ ulimit -Sn`**
 
 Check limit for other user
-
-$ su - <user> -c 'ulimit -aHS' -s '/bin/bash'
+> **`$ su - <user> -c 'ulimit -aHS' -s '/bin/bash'`**
 
 
