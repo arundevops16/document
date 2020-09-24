@@ -56,7 +56,7 @@ The maximum number of file descriptors is controlled two different ways:
 - a) Per-User Limit:
 
 1. Explicitly set the number of file descriptors using the ulimit command
-$ **`ulimit -n <open count>`**
+> $ **`ulimit -n <open count>`**
 
 ex:
 > **`$ ulimit -n 8096`** 
