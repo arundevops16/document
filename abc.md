@@ -62,14 +62,15 @@ ex:
 > **`$ ulimit -n 8096`** 
 
 ### Note:
-ulimit -n command show default soft limit , but when we set this using ulimit -n <open count> it set hard and soft. so if your hard limit is 8096 and you did ulimit -n 4096 , it will set your hard and soft limit to 4096 for that linux session.
+ulimit -n command show default soft limit, but when we set this using `ulimit -n <open count>` it set hard and soft. So if hard limit is 8096 and set ulimit -n 4096, it will set hard and soft limit to 4096 for that linux session.
 
 2. Set below values in **`/etc/security/limits.conf`**
  
 > soft nofile 65536
+
 > hard nofile 65536
  
-The new value can be set in /etc/security/limits.conf (need to logout and login again or requires OS restart to take effect) 
+The new value added in /etc/security/limits.conf can be taken effect only after logout and login or requires OS restart. 
  
 pam-limits
 If above changes are not working for then add below value in **`/etc/pam.d/common-session`**
@@ -84,9 +85,9 @@ Set this higher than user-limit set above **`/etc/sysctl.conf`**
 
 > **`$ sysctl -p`**
 
-This will will increase “total” number of files that can remain open system-wide.
+This will will increase total number of files that can remain open system-wide.
 
-Verify New Limits
+### Verify New Limits
 
 > **`$ cat /proc/sys/fs/file-max`**
 
@@ -98,5 +99,4 @@ Soft Limit
 
 Check limit for other user
 > **`$ su - <user> -c 'ulimit -aHS' -s '/bin/bash'`**
-
 
