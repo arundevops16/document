@@ -1,4 +1,4 @@
-#*Task 2:
+*Task 2:
 Description : The same company xyz has provided one of his developers an oracle based application
 which runs on a web logic server. Somehow the developer while trying to deploy the application is
 getting file related errors and he somehow concludes that there are way too many files open in the
