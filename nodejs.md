@@ -32,7 +32,9 @@ Scripts required for deployment pushed to repository along with the code.
 ## Dockerfile:
 
 > create image based on the official Node 12 image from the dockerhub
+>
 > **`FROM arunlicious/node:12`**
+>
 > Create a directory where our app will be placed
 > RUN mkdir -p /usr/src/app
 > Change directory so that our commands run inside this new directory
