@@ -37,17 +37,17 @@ To find max open file limit:
 
 ulimit further divided into soft limit and hard limit.
  
-Soft Limit :- 
+# _Soft Limit:_
 Soft limit means process will be allowed to go beyond this limit but it is warning that you are exceeding your resource consumption. And it will meet your hard limit soon.
 > **`$ ulimit -S -n`** 
  
  
-HardLimit :- 
+# *HardLimit:*
 Hard limit is a full stop for a process, Process will not be allowed to create more connection than this count. 
 > **`$ ulimit -H -n`**
  
 
-Solution:
+## Solution:
 
 
 In case of weblogic application running on linux server might creating so many connections like 3k - 4k connections. We have to increase the limit.
