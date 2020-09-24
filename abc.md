@@ -53,43 +53,46 @@ Hard limit is a full stop for a process, Process will not be allowed to create m
 In case of weblogic application running on linux server might creating so many connections like 3k - 4k connections. We have to increase the limit.
 The maximum number of file descriptors is controlled two different ways:
 
-a) Per-User Limit:
+- a) Per-User Limit:
 
 1. Explicitly set the number of file descriptors using the ulimit command
 $ **`ulimit -n <open count>`**
 
 ex:
 > **`$ ulimit -n 8096`** 
-Note:
+
+### Note:
 ulimit -n command show default soft limit , but when we set this using ulimit -n <open count> it set hard and soft. so if your hard limit is 8096 and you did ulimit -n 4096 , it will set your hard and soft limit to 4096 for that linux session.
 
-2. Set below values in /etc/security/limits.conf
+2. Set below values in **`/etc/security/limits.conf`**
  
-* soft nofile 65536
-* hard nofile 65536
+> soft nofile 65536
+> hard nofile 65536
  
 The new value can be set in /etc/security/limits.conf (need to logout and login again or requires OS restart to take effect) 
  
 pam-limits
-If above changes are not working for then add below value in /etc/pam.d/common-session
+If above changes are not working for then add below value in **`/etc/pam.d/common-session`**
 
-session required pam_limits.so
+> session required pam_limits.so
 
 
-b) System-Wide Limit
-Set this higher than user-limit set above /etc/sysctl.conf
+- b) System-Wide Limit
+Set this higher than user-limit set above **`/etc/sysctl.conf`**
 
-fs.file-max = 2097152
+> fs.file-max = 2097152
+
 > **`$ sysctl -p`**
 
 This will will increase “total” number of files that can remain open system-wide.
 
 Verify New Limits
 
-cat /proc/sys/fs/file-max
+> **`$ cat /proc/sys/fs/file-max`**
 
 Hard Limit
 > **`$ ulimit -Hn`**
+
 Soft Limit
 > **`$ ulimit -Sn`**
 
