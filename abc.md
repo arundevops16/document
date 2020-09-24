@@ -42,11 +42,11 @@ Soft limit means process will be allowed to go beyond this limit but it is warni
 > **`$ ulimit -S -n`** 
  
  
-### *HardLimit:*
+### *Hard Limit:*
 Hard limit is a full stop for a process, Process will not be allowed to create more connection than this count. 
 > **`$ ulimit -H -n`**
  
-
+#
 ## Solution:
 
 
