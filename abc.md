@@ -37,12 +37,12 @@ To find max open file limit:
 
 ulimit further divided into soft limit and hard limit.
  
-# _Soft Limit:_
+###  *Soft Limit:*
 Soft limit means process will be allowed to go beyond this limit but it is warning that you are exceeding your resource consumption. And it will meet your hard limit soon.
 > **`$ ulimit -S -n`** 
  
  
-# *HardLimit:*
+### *HardLimit:*
 Hard limit is a full stop for a process, Process will not be allowed to create more connection than this count. 
 > **`$ ulimit -H -n`**
  
