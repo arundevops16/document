@@ -11,6 +11,8 @@ many open files and solve it.***
 The ulimit command allows you to control the user resource limits in the system such as process data size, process virtual memory, and process file size, number of process etc.
 
 > **`$ ulimit -a`**
+
+
 	>	core file size          (blocks, -c) 0
 	>	data seg size           (kbytes, -d) unlimited
 	>	scheduling priority             (-e) 0
