@@ -75,14 +75,14 @@ Scripts required for deployment pushed to repository along with the code.
           
 Variables used in the pipeline:
 
-app_name = nodejs
-def env = "${params.appENV}" (Choice parameter)
-def BRANCH = "${params.appBRANCH}" (String parameter)
+- app_name = nodejs
+- def env = "${params.appENV}" (Choice parameter)
+- def BRANCH = "${params.appBRANCH}" (String parameter)
 
 
 Jenkins global environment variable:
-WORKSPACE
-BUILD_NUMBER	
+- WORKSPACE
+- BUILD_NUMBER	
 
 
 ### Note: 
