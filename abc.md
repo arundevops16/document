@@ -17,7 +17,7 @@ The ulimit command allows you to control the user resource limits in the system 
 	>	pending signals                 (-i) 3802
 	>	max locked memory       (kbytes, -l) 16384
 	>	max memory size         (kbytes, -m) unlimited
-	>	open files                      (-n) 1030
+	>	open files                      (-n) 1024
 	>	pipe size            (512 bytes, -p) 8
 	>	POSIX message queues     (bytes, -q) 819200
 	>	real-time priority              (-r) 0
@@ -60,7 +60,7 @@ The maximum number of file descriptors is controlled two different ways:
 > $ **`ulimit -n <open count>`**
 
 ex:
-> **`$ ulimit -n 8096`** 
+> **`$ ulimit -n 4096`** 
 
 ### Note:
 ulimit -n command show default soft limit, but when we set this using `ulimit -n <open count>` it set hard and soft. So if hard limit is 8096 and set ulimit -n 4096, it will set hard and soft limit to 4096 for that linux session.
