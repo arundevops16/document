@@ -1,7 +1,7 @@
 #
 # Task 3:
 ## Description : A developer of the same 'XYZ' company has been accessing an AWS instance for quite long and deploy one of his client's production application server . One day the client calls in and reports that the production seems to be down. The perplexed developer goes into the server to take a look into the application server. To his surprise, his application server had crashed and the command to restart application server is not even working. The developer, being aware of some commands, tries to tweak around and discovers after running ` df -h ` that the server's disk is 100% full and most of the space is taken by /usr/src directory.
-#
+
 ## Solution1:
 
 **Assumption1:** If we are not able to execute any commands on the server due to 100% disk space utilization and not able login to the server then
